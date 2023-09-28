@@ -2489,7 +2489,10 @@ input[type="button"].btn--primary:focus {
     background: transparent;
     padding: 0;
     position: relative;
-    flex-basis: calc(33.33% - 30px);
+    flex-basis: calc(33.33% - 30px); 
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+    align-items: center; /* Add this line */
   }
   
   .skill-bars-fat li strong {
@@ -2501,8 +2504,12 @@ input[type="button"].btn--primary:focus {
     font-size: calc(var(--text-size) * 0.7778);
     line-height: 2rem;
     position: absolute;
-    top: -3.2rem;
-    left: 0;
+    /* top: -3.2rem;
+    left: 0; */
+
+    top: -3.2rem; /* Change this line to 0 */
+    left: 50%; /* Add this line */
+    transform: translateX(-50%); /* Add this line */
   }
   
   .skill-bars-fat li .skill-container {
@@ -2520,7 +2527,7 @@ input[type="button"].btn--primary:focus {
     margin-left: 0;
     flex-shrink: 0;
   }
-  
+
   
 /* ------------------------------------------------------------------- 
  * ## alert box
